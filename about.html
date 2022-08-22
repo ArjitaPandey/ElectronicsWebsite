@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e2e3ed;
+            max-width: 100%;
+            opacity: 0.8;
+        }
+        
+        li a {
+            display: inline-block;
+            color: black;
+            text-align: center;
+            padding: 40px 37px;
+            text-decoration: none;
+            font-style: Montserrat;
+            font-size: 20px;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a:hover {
+            background-color: #111;
+            color: #fff;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #e2e3ed;
+            /*#e2e3ed*/
+            opacity: 0.9;
+            top: 0;
+            width: 100%;
+            left: 0;
+        }
+        
+        li p {
+            color: #fff;
+        }
+        
+        a:link {
+            text-decoration: none;
+            color: black;
+        }
+        
+        #search {
+            float: right;
+            padding: 10px;
+            border-radius: 7px;
+            width: 15%;
+        }
+        
+        form {
+            color: transparent;
+            display: flex;
+            padding: 2px;
+            border: 1px solid currentColor;
+            border-radius: 5px;
+            margin-top: 13%;
+        }
+        
+        input[type="search"] {
+            border: none;
+            background-color: black;
+            opacity: 0.7;
+            margin: 0;
+            padding: 7px 8px;
+            font-size: 14px;
+            color: #fff;
+            border: 1px solid transparent;
+            border-radius: inherit;
+        }
+        
+        input[type="search"]:hover {
+            background-color: rgb(110, 107, 107);
+            color: black;
+        }
+        
+        input[type="search"]::placeholder:hover {
+            color: black;
+        }
+        
+        input[type="search"]::placeholder {
+            color: #fff;
+        }
+        
+        button[type="submit"] {
+            text-indent: -999px;
+            overflow: hidden;
+            width: 40px;
+            padding: 0;
+            margin: 0;
+            border: 1px solid transparent;
+            border-radius: inherit;
+            background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
+            cursor: pointer;
+            opacity: 0.7;
+        }
+        
+        button[type="submit"]:hover {
+            opacity: 1;
+        }
+        
+        #nav-bar {
+            overflow: auto;
+            max-width: 100%;
+        }
+        
+        #about-us {
+            color: #444;
+            text-align: center;
+            font-size: 2.2em;
+            font-family: sans-serif;
+        }
+        
+        #underline {
+            height: 1px;
+            width: 7%;
+            background-color: black;
+        }
+        
+        .text {
+            text-align: center;
+            font-size: 25px;
+            /* font-family: cursive;*/
+            font-style: italic;
+            color: #00308F;
+        }
+        
+        .who-we-are {
+            font-size: 25px;
+            text-align: center;
+        }
+        
+        .heading {
+            text-align: center;
+            font-family: cursive;
+            font-size: 35px;
+            color: #333;
+        }
+        
+        .main-text {
+            margin-left: 22%;
+            margin-right: 20%;
+            font-size: 25px;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="nav-bar">
+        <ul>
+            <li><a href="#">MAIN</a></li>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="#">CATEGORY</a></li>
+            <li><a href="demo.html">DEMO</a></li>
+            <li><a href="contacts.html">CONTACTS</a></li>
+            <li><a href="login.html">LOGIN</a></li>
+            <li><a href="feed.html">FEEDBACK</a></li>
+            <li><a href="SignUp.html">SIGNUP</a></li>
+            <li>
+                <form>
+                    <input type="search" placeholder="Search...">
+                    <button type="submit">Search</button>
+                </form>
+            </li>
+
+
+
+        </ul>
+
+
+
+    </div>
+    <div>
+        <h3 id="about-us">About Us</h3>
+        <hr id="underline">
+    </div>
+    <div>
+        <p class="text">
+            A Trusted store for electronic purchasing.
+        </p>
+    </div>
+    <div>
+        <p class="who-we-are">Who we are?</p>
+
+    </div>
+
+    <div>
+        <h5 class="heading">Welcome! We're glad you are here.</h5>
+        <p class="main-text">This E-commerce website exists to provide a trusted service for shopping electronic items and servicing. We are honored to help our customers and provide them with the best type of service. We're here for you.
+        </p>
+        <p class="main-text">Our highest priorities are keeping customers’ information safe, providing customers with transparency and control, and making privacy controls incredibly easy to use and understand.
+        </p>
+    </div>
+
+    <script>
+        /*     function myFunction() {
+                                    let image = document.getElementById("img-section");
+                                    let images = ['image/discount.jpg', 'image/home.png'];
+                                    setInterval(function() {
+                                        let random = Math.floor(Math.random() * 2);
+                                        image.src = images[random];
+
+                                    }, 800);
+                                }*/
+    </script>
+
+
+</body>
+
+</html>

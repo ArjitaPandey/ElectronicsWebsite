@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+        body {
+            background-color: #e2e3ed;
+            max-width: 100%;
+            opacity: 0.8;
+        }
+        
+        li a {
+            display: inline-block;
+            color: black;
+            text-align: center;
+            padding: 40px 37px;
+            text-decoration: none;
+            font-style: Montserrat;
+            font-size: 15px;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a:hover {
+            background-color: #111;
+            color: #fff;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #e2e3ed;
+            /*#e2e3ed*/
+            opacity: 0.9;
+            top: 0;
+            width: 100%;
+            left: 0;
+        }
+        
+        li p {
+            color: #fff;
+        }
+        
+        a:link {
+            text-decoration: none;
+            color: #fff;
+        }
+        
+        #search {
+            float: right;
+            padding: 10px;
+            border-radius: 7px;
+            width: 70%;
+        }
+        
+        form {
+            color: transparent;
+            display: flex;
+            padding: 2px;
+            border: 1px solid currentColor;
+            border-radius: 5px;
+            margin-top: 13%;
+        }
+        
+        input[type="search"] {
+            border: none;
+            background-color: black;
+            opacity: 0.7;
+            margin: 0;
+            padding: 7px 8px;
+            font-size: 14px;
+            color: #fff;
+            border: 1px solid transparent;
+            border-radius: inherit;
+        }
+        
+        input[type="search"]:hover {
+            background-color: rgb(110, 107, 107);
+            color: black;
+        }
+        
+        input[type="search"]::placeholder:hover {
+            color: black;
+        }
+        
+        input[type="search"]::placeholder {
+            color: #fff;
+        }
+        
+        button[type="submit"] {
+            text-indent: -999px;
+            overflow: hidden;
+            width: 40px;
+            padding: 0;
+            margin: 0;
+            border: 1px solid transparent;
+            border-radius: inherit;
+            background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
+            cursor: pointer;
+            opacity: 0.7;
+        }
+        
+        button[type="submit"]:hover {
+            opacity: 1;
+        }
+        
+        #main-img {
+            margin-right: 0;
+            margin-left: 0;
+        }
+        
+        #img-section:hover {
+            opacity: 0.93;
+        }
+        /*("https://static.vecteezy.com/system/resources/previews/000/176/670/original/mega-sale-advertising-voucher-and-banner-design-with-offer-detai-vector.jpg")*/
+        
+        #img-section {
+            background-image: url("https://wallpaperaccess.com/full/2593199.jpg");
+            background-repeat: no-repeat;
+            position: relative;
+            background-size: 100% 100%;
+            width: 100%;
+            height: 80vh;
+            float: left;
+            position: absolute;
+        }
+        
+        #nav-bar {
+            overflow: auto;
+            max-width: 100%;
+        }
+        
+        .cards-section {
+            margin-top: 7%;
+        }
+        
+        .cards-section {
+            display: flex;
+            color: #fff;
+        }
+        
+        #card1,
+        #card2,
+        #card3,
+        #card4,
+        #card5,
+        #card6 {
+            background-color: #fff;
+            /*#F8F8F8*/
+            border-radius: 7px;
+        }
+        
+        .cards {
+            /* Add shadows to create the "card"effect */
+            box-shadow: 0 4px 8px 0 #F8F8F8;
+            transition: 0.3s;
+            border-radius: 7px;
+        }
+        
+        .cards:hover {
+            box-shadow: 0 8px 16px 0 white;
+            opacity: 0.9;
+            border: 0.2px solid #ccc;
+        }
+        
+        #card3 img {
+            height: 180px;
+            border-radius: 7px;
+        }
+        
+        #card4 img {
+            height: 160px;
+            border-radius: 7px;
+        }
+        
+        #card5 img {
+            height: 200px;
+            border-radius: 7px;
+        }
+        
+        #card6 img {
+            height: 180px;
+            border-radius: 7px;
+        }
+        
+        #card2 img {
+            height: 200px;
+            border-radius: 7px;
+        }
+        
+        #card1 {
+            margin-left: 2%;
+            border-radius: 7px;
+        }
+        
+        .cards {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 200px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+            color: black;
+        }
+        
+        .cards button {
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+        
+        .cards:hover {
+            opacity: 0.7;
+        }
+        
+        .cards button:hover {
+            opacity: 0.7;
+        }
+        
+        .overlap-section {
+            margin-top: 44%;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        #card-1 img {
+            height: 500px;
+        }
+        
+        .text-card-section {
+            display: flex;
+            justify-content: flex-start;
+        }
+        
+        .text-card-section {
+            /* Add shadows to create the "card" effect */
+            box-shadow: 0 4px 8px 0 white;
+            transition: 0.3s;
+            border-radius: 7px;
+        }
+        
+        .brands-section {
+            display: flex;
+            flex-direction: row;
+            margin-left: 15%;
+            margin-right: 15%;
+            display: flex-start;
+            justify-content: space-evenly;
+        }
+        
+        .clients-heading {
+            font-size: 40px;
+            color: #555;
+            text-align: center;
+            font-family: Barlow, sans-serif;
+        }
+        
+        #brand-1,
+        #brand-2,
+        #brand-3,
+        #brand-4 {
+            margin: auto;
+            box-shadow: 0px 0px 0px #555;
+            transition: .5s;
+            border-radius: 5px;
+        }
+        
+        #brand-5,
+        #brand-6 {
+            border-radius: 5px;
+        }
+        
+        .hr-tag {
+            width: 10%;
+            height: 5px;
+            border: none;
+            background: #26ccca;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .brands-section-2 {
+            display: flex;
+            justify-content: space-evenly;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        
+        footer {
+            width: 100%;
+            background-color: black;
+            padding: 50px 10px 50px 10px;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            margin: 10px 0 10px 0;
+            color: white;
+        }
+        
+        footer ul {
+            list-style-type: none;
+            background-color: transparent;
+            font-size: 15px;
+        }
+        
+        h4 {
+            color: #e2e3ed;
+        }
+        
+        .left-side hr {
+            margin-top: 1%;
+            background: #26ccca;
+            height: 1px;
+        }
+        
+        h4:hover {
+            font-size: 19px;
+        }
+        
+        .center-side hr {
+            margin-top: 40%;
+            background: #26ccca;
+            height: 1px;
+        }
+        
+        .right-side hr {
+            margin-top: 25%;
+            background: #26ccca;
+            height: 1px;
+        }
+        
+        .card-1 img:hover {
+            opacity: 0.9;
+        }
+        
+        .card-1 {
+            margin-left: 2%;
+        }
+        
+        .card-2 img:hover {
+            opacity: 0.9;
+        }
+        
+        .card-3 img:hover {
+            opacity: 0.9;
+        }
+        
+        footer ul li:hover {
+            border: 0.5px solid white;
+        }
+        
+        #bestsellers-heading {
+            margin-top: 5%;
+        }
+        /*  #bestsellers-hr {
+            margin-bottom: 2%;
+        }*/
+        
+        #clients-hr {
+            margin-bottom: 7%;
+        }
+        
+        .card-2 {
+            margin-right: 2%;
+        }
+        
+        .name-sec {
+            padding-top: 20%;
+            padding-left: 5%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="nav-bar">
+        <ul>
+            <li><a href="#">MAIN</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="#">CATEGORY</a></li>
+            <li><a href="demo.html">DEMO</a></li>
+            <li><a href="contacts.html">CONTACTS</a></li>
+            <li><a href="login.html">LOGIN</a></li>
+            <li><a href="feed.html">FEEDBACK</a></li>
+            <li><a href="SignUp.html">SIGNUP</a></li>
+            <li>
+                <form>
+                    <input type="search" placeholder="Search..." id="search">
+                    <button type="submit">Search</button>
+                </form>
+            </li>
+
+
+
+        </ul>
+
+
+
+    </div>
+    <div id="img-section">
+
+    </div>
+    <div class="overlap-section">
+        <div class="card-1">
+            <img src="https://thumbs.dreamstime.com/b/e-commerce-advertisement-design-vector-good-online-store-company-personal-use-e-commerce-advertisement-design-vector-good-178524948.jpg" alt="card1" height="200px" width="400px">
+        </div>
+        <div class="card-3">
+            <img src="https://static.doofinder.com/main-files/uploads/2018/08/facebook-ads-ecommerce.jpg" height="200px" width="400px">
+        </div>
+        <div class="card-2">
+            <img src="https://www.klaviyo.com/wp-content/uploads/2020/02/ecommerce-advertising-online-bh-1500x700-022020-1-1024x478.jpg" width="400px" height="200px" alt="card2 ">
+        </div>
+
+    </div>
+    <h2 class="clients-heading " id="bestsellers-heading ">Our BestSellers</h2>
+    <hr class="hr-tag " id="bestsellers-hr ">
+
+    <div class="cards-section ">
+        <div class="cards " id="card1 ">
+            <img src="https://1.bp.blogspot.com/-vuE1vHfEJUA/Xt4kXOGmVoI/AAAAAAAAAXg/xvprNvXADwEGTMRjlkb8vA3Qku4mcd1mACK4BGAsYHg/s1500/61SH33rH9cL._SL1500_.jpg " alt="Washing machine " style="width:100% " alt="card1 " height="210px">
+            <p>360° Bloomwash Pro 7.5kg 5 Star Top Load Washing Machine with In-Built Heater</p>
+            <p class="price ">$19.99</p>
+
+            <p><button>Add to Cart</button></p>
+
+        </div>
+        <div class="cards " id="card2 ">
+            <img src="https://media.croma.com/image/upload/f_auto,q_auto,d_Croma%20Assets:no-product-image.jpg,h_260,w_260/v1621256280/Croma%20Assets/Large%20Appliances/Refrigerator/Images/234078_8_lsajvj.png " alt="Refrigerator " style="width:100%
+                " alt="card2 ">
+            <p>Haier Magic Convertible 346 Litres 3 Star Frost Free Triple Inverter DoubleDoor Refrigerator</p>
+            <p class="price ">$19.99</p>
+
+            <p><button>Add to Cart</button></p>
+
+        </div>
+        <div class="cards " id="card3 ">
+            <img src="https://d2cdo4blch85n8.cloudfront.net/wp-content/uploads/2020/07/OnePlus-Buds-True-Wireless-Earbuds-Featured-image.jpg " alt="Denim Jeans " style="width:100% " alt="card3 " height="200px">
+            <p>Oneplus Buds Z2 Obsidian Black Bluetooth Truly Wireless in Ear Earbuds with Mic Active Noise Cancellation</p>
+            <p class="price ">$19.99</p>
+
+            <p><button>Add to Cart</button></p>
+
+        </div>
+        <div class="cards " id="card4 ">
+            <img src="https://gameswho.com/wp-content/uploads/thumbs_dir/kontrolfreek-fps-freek-galaxy-purple-for-playstation-4-ps4-controller--ok6yqsrchkdiotkkjqtj9yrlcdscgll6pxmfln05u0.jpg " style="width:100% " alt="card4 " height="180px">
+            <p>KontrolFreek FPS Freek Galaxy Purple for PlayStation 4 Controller , Performance Thumbsticks 1 High-Rise, 1 Mid-Rise</p>
+            <p class="price ">$19.99</p>
+
+            <p><button>Add to Cart</button></p>
+
+        </div>
+        <div class="cards " id="card5 ">
+            <img src="https://m.media-amazon.com/images/I/41H2QuJITKL._SL500_.jpg " alt="Computers " style="width:100% " alt="card5 " height="200px">
+            <p>Lenovo Tab Yoga Smart Tablet with The Google Assistant (10.1 inch/25.65 cm, 4GB, 64GB, Wi-Fi + 4G LTE, Calling), Iron Grey</p>
+            <p class="price ">$19.99</p>
+
+            <p><button>Add to Cart</button></p>
+
+        </div>
+        <div class="cards " id="card6 ">
+            <img src="C:\Users\Arjita\OneDrive\Desktop\lamp-img.jfif" alt="Computers " style="width:100% " alt="card5 " height="200px">
+            <p>Unique Metal Pendant Lamp-Homesake Black Hanging Light,Pendant lamp Pendants Ceiling Lamp (Black)
+            </p>
+            <p class="price ">$19.99</p>
+
+            <p><button>Add to Cart</button></p>
+
+
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <h2 class="clients-heading ">Our Clients</h2>
+    <hr class="hr-tag " id="clients-hr ">
+    <div class="brands-section ">
+        <div class="brand-1 ">
+            <img src="C:\Users\Arjita\OneDrive\Desktop\apple-logo.png " alt="brand1 " height="150px " width="160px ">
+        </div>
+        <div class="brand-2 ">
+            <img src="C:\Users\Arjita\OneDrive\Desktop\samsung-logo2.jpg " alt="brand2 " height="150px " width="160px ">
+        </div>
+        <div class="brand-3 ">
+            <img src="C:\Users\Arjita\OneDrive\Desktop\lg-logo.jpg " alt="brand3 " height="150px " width="160px ">
+
+        </div>
+        <div class="brand-4 ">
+            <img src="C:\Users\Arjita\OneDrive\Desktop\whirlpool-logo.jfif " alt="brand4 " height="150px " width="160px ">
+        </div>
+
+
+    </div>
+    <br>
+    <br>
+    <div class="brands-section-2 ">
+        <div class="brand-5 ">
+            <img src="C:\Users\Arjita\OneDrive\Desktop\lenovo-logo.jpg " alt="brand5 " height="150px " width="160px ">
+        </div>
+        <div class="brand-6 ">
+            <img src="C:\Users\Arjita\OneDrive\Desktop\oppo-logo.jpg " alt="brand6 " height="150px " width="160px ">
+
+
+        </div>
+        <div class="brand-7 ">
+            <img src="C:\Users\Arjita\OneDrive\Desktop\vivo-logo.png " alt="brand7 " height="150px " width="160px ">
+        </div>
+    </div>
+    <br>
+    <br>
+    <footer>
+        <div class="left-side ">
+            <h4>USEFUL INFORMATION</h4><br>
+            <hr>
+            <ul>
+                <li>About US</li><br><br>
+                <li>Shop</li><br><br>
+                <li>Our Story</li><br><br>
+                <li>Contact Us</li><br><br>
+                <li>Feedback</li><br><br>
+                <li>Free Advice</li><br><br>
+                <li>Terms & Conditions</li><br>
+            </ul>
+        </div>
+
+        <div class="center-side ">
+            <h4>BRANDS</h4>
+            <hr>
+            <ul>
+                <li>LG</li><br><br>
+                <li>Lenovo</li><br><br>
+                <li>Asus</li><br><br>
+                <li>Whirlpool</li><br><br>
+                <li>Samsung</li><br><br>
+                <li>Oppo</li><br><br>
+                <li>Motorola</li><br><br>
+
+            </ul>
+        </div>
+        <div class="right-side ">
+            <h4>CONTACTS</h4>
+            <hr>
+            <ul>
+                <li>Call us : +0129****</li>
+
+            </ul>
+            <br>
+            <h4>ADDRESS</h4>
+            <hr>
+            <ul>
+                <li>Saket , New Delhi</li>
+            </ul>
+            <br><br>
+
+
+
+        </div>
+        <div class="name-sec">
+            <h5>Arjita Pandey</h5>
+            <h5>2010993520</h5>
+            <h5>arjita3520.be20@chitkara.edu.in</h5>
+        </div>
+    </footer>
+    <script>
+        function myFunction() {
+            let image = document.getElementById("img-section");
+            let images = ['image/discount.jpg', 'image/home.png'];
+            setInterval(function() {
+                let random = Math.floor(Math.random() * 2);
+                image.src = images[random];
+
+            }, 800);
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
